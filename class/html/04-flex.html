@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Flex</title>
+    <style>
+        .mother {
+            width: 500px;
+            height: 500px;
+            background-color: skyblue;
+            display:flex;
+        }
+
+        .child{
+            width: 100px;
+            height: 100px;
+            background-color: tomato;
+            border:1px solid black;
+            
+        }
+
+        #position{
+            background-color: yellowgreen;
+            position:absolute;
+            top:40px;
+            left:40px;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="mother">
+        <div class="child"></div>
+        <div class="child" id="position"></div>
+        <div class="child"></div>
+    </div>
+</body>
+</html>

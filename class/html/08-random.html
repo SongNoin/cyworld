@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <script>
+      function aaa() {
+        let Auth = String(Math.floor(Math.random() * 1000000)).padStart(6, "0");
+        document.getElementById("number").innerText = Auth;
+      }
+    </script>
+  </head>
+  <body>
+    <div class="make">인증번호만들기</div>
+    <div id="number">000000</div>
+    <button onclick="aaa()">인증번호전송</button>
+  </body>
+</html>
