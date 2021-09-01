@@ -146,11 +146,13 @@
 }
 
 .wrapper__right__body {
+  position: relative;
   width: 524px;
   height: 442px;
   border: 1px solid gray;
   border-radius: 15px;
   background-color: white;
+  z-index: 1;
 }
 
 iframe {
@@ -161,4 +163,28 @@ iframe {
 
 .feel__select {
   width: 150px;
+}
+
+.navigation {
+  position: absolute;
+  top: 110px;
+  left: 780px;
+  width: 62px;
+  height: 100px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.navigation__item {
+  width: 60px;
+  height: 30px;
+  text-align: center;
+  background-color: #298eb5;
+  color: white;
+  border: 1px solid black;
+  border-radius: 0px 7px 7px 0px;
+  font-size: 10px;
+  padding-top: 8px;
+  cursor: pointer;
 }

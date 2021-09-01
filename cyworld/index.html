@@ -5,8 +5,40 @@
     <link href="styles/index.css" rel="stylesheet" />
     <script
       src="https://kit.fontawesome.com/45eb0d1b97.js"
+      ;
       crossorigin="anonymous"
+      ;
     ></script>
+    <script>
+      function menuMove(event) {
+        console.log(event.target.id);
+        if (event.target.id === "home") {
+          document.getElementById("menu").setAttribute("src", "home.html");
+          document.getElementById("home").style =
+            "color: black; background-color:white";
+          document.getElementById("game").style =
+            "color: white; background-color: #298eb5";
+          document.getElementById("jukebox").style =
+            "color: white; background-color: #298eb5";
+        } else if (event.target.id === "game") {
+          document.getElementById("menu").setAttribute("src", "game.html");
+          document.getElementById("game").style =
+            "color: black; background-color:white";
+          document.getElementById("home").style =
+            "color: white; background-color: #298eb5";
+          document.getElementById("jukebox").style =
+            "color: white; background-color: #298eb5";
+        } else if (event.target.id === "jukebox") {
+          document.getElementById("menu").setAttribute("src", "music.html");
+          document.getElementById("jukebox").style =
+            "color: black; background-color:white";
+          document.getElementById("home").style =
+            "color: white; background-color: #298eb5";
+          document.getElementById("game").style =
+            "color: white; background-color: #298eb5";
+        }
+      }
+    </script>
   </head>
 
   <body>
@@ -50,7 +82,23 @@
             <div class="wrapper__right__body">
               <!-- <iframe src="home.html"></iframe> -->
               <!-- <iframe src="game.html"></iframe> -->
-              <iframe src="music.html"></iframe>
+              <iframe id="menu" src="home.html"></iframe>
+            </div>
+
+            <div class="navigation">
+              <div id="home" class="navigation__item" onclick="menuMove(event)">
+                홈
+              </div>
+              <div id="game" class="navigation__item" onclick="menuMove(event)">
+                게임
+              </div>
+              <div
+                id="jukebox"
+                class="navigation__item"
+                onclick="menuMove(event)"
+              >
+                쥬크박스
+              </div>
             </div>
           </div>
         </div>
